@@ -1,0 +1,108 @@
+--Matthew Musich
+--Septemeber 13th, 2013
+--Queries HW 1
+
+--Q 1
+SELECT
+customers.*
+
+FROM
+customers;
+
+--Q 2
+SELECT
+agents.name,
+agents.city
+
+FROM
+agents
+
+WHERE
+agents.name = 'Smith';
+
+--Q 3
+SELECT
+products.pid,
+products.name,
+products.quantity
+
+FROM
+products
+
+WHERE
+products.priceusd > 1.25;
+
+--Q 4
+SELECT
+orders.ordno,
+orders.aid
+
+FROM
+orders; 
+
+
+--Q 5
+SELECT
+customers.name,
+customers.city
+
+FROM
+customers
+
+WHERE
+customers.city != 'Dallas';
+
+--Q 6
+SELECT
+agents.name
+
+FROM
+agents
+
+WHERE
+agents.city = 'New York' or 
+agents.city = 'Newark';
+
+--Q 7
+SELECT
+products.*
+
+FROM
+products
+
+WHERE
+products.city != 'New York' or
+products.city != 'Newark' and
+products.priceusd <= 1.00 ;
+
+--Q 8
+SELECT
+orders.*
+
+FROM
+orders
+
+WHERE
+orders.mon = 'jan' or
+orders.mon = 'mar';
+
+--Q 9
+SELECT
+orders.*
+
+FROM
+orders
+
+WHERE
+orders.mon = 'feb' and
+orders.dollars < 100.00;
+
+--Q 10
+SELECT
+orders.*
+
+FROM
+orders
+
+WHERE
+orders.cid = 'c005' ;
